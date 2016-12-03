@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="qFm-xl-axC">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" userLabel="Home" customClass="HomeViewController" customModule="MedIn" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Af-QV-46H">
+                                <rect key="frame" x="0.0" y="28" width="375" height="582"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="1Af-QV-46H" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="1Gu-r7-k4D"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1Af-QV-46H" secondAttribute="trailing" constant="-16" id="3CG-q3-Neh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1Af-QV-46H" secondAttribute="trailing" constant="-16" id="6iU-Iy-ShT"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="1Af-QV-46H" secondAttribute="bottom" constant="8" id="its-8m-KBx"/>
+                            <constraint firstItem="1Af-QV-46H" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="yee-Xq-12W"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Home" image="Home" id="y4n-Cb-PNh"/>
+                    <connections>
+                        <outlet property="webView" destination="1Af-QV-46H" id="L2q-9E-UzY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1524" y="-842.42878560719646"/>
+        </scene>
+        <!--Timer-->
+        <scene sceneID="3Gv-d9-RBs">
+            <objects>
+                <viewController id="way-nC-3kf" userLabel="Timer" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ebg-dy-GJo"/>
+                        <viewControllerLayoutGuide type="bottom" id="hkh-3w-gAi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="l6a-Gn-5FD" userLabel="Timer View">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Starting Bell" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U3F-zd-k8U">
+                                <rect key="frame" x="114.5" y="51" width="146" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.88769826709016841" green="1" blue="0.84678186661432853" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <accessibility key="accessibilityConfiguration">
+                            <bool key="isElement" value="YES"/>
+                        </accessibility>
+                        <constraints>
+                            <constraint firstItem="U3F-zd-k8U" firstAttribute="centerX" secondItem="l6a-Gn-5FD" secondAttribute="centerX" id="0Yr-f9-Nmy"/>
+                            <constraint firstItem="U3F-zd-k8U" firstAttribute="top" secondItem="Ebg-dy-GJo" secondAttribute="bottom" constant="31" id="MxL-a9-R9P"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Timer" image="Timer" id="Z8G-1a-yTE"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e6o-5o-qrH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1524" y="-189.3553223388306"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="FHU-Za-Lky">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="qFm-xl-axC" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="de4-Ck-agH">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="HIK-AY-CTg"/>
+                        <segue destination="way-nC-3kf" kind="relationship" relationship="viewControllers" id="lM1-wX-EeG"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d0a-Vd-ZTQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2350" y="-540"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Home" width="40" height="28"/>
+        <image name="Timer" width="40" height="28"/>
+    </resources>
+</document>
